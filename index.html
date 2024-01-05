@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>AR.js Marker Checker</title>
     <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
+    <link rel="stylesheet" href="stylesheet.css" />
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script type="text/javascript" src="./main.js"></script>
@@ -19,9 +20,9 @@
     <label for="pattfile">マーカーをアップロード:</label>
     <input type="file" id="pattfile" accept=".patt" onchange="loadImage(this);">
 
-<!--     <div class="standard-dialog center scale-down" style="width:100svw;"> -->
-        <iframe class="standard-dialog center scale-down" id="arwindow" width=80vw height=auto src="arscene.html"></iframe>
-<!--     </div> -->
+    <div class="iframeWrap">
+        <iframe id="arwindow" width="560" height="315" src="arscene.html"></iframe>
+    </div>
     
 </body>
 
