@@ -14,19 +14,7 @@
     <label for="pattfile">マーカーをアップロード:</label>
     <input type="file" id="pattfile" accept=".patt" onchange="loadImage(this);">
 
-    <iframe width=350 height=400>
-        <a-scene embedded arjs vr-mode-ui="enabled: false">
-            <!-- Hiro marker -->
-            <a-marker id="pattmarker" type="pattern" preset="hiro" url="">
-                <a-box position="0 0.5 0" material="opacity: 0.75; color:red"></a-box>
-            </a-marker>
-            
-            <a-entity camera></a-entity>
-    
-            <a-light color="white" position="2 3 5"></a-light>
-            <a-light type="ambient" color="#222" intensity="1.0"></a-light>
-        </a-scene>
-    </iframe>
+    <iframe width=350 height=400 src="arscene.html"></iframe>
     
 </body>
 
