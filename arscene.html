@@ -14,43 +14,6 @@
             display: none !important;
         }
     </style>
-
-    <script>
-        AFRAME.registerComponent('vidhandler', {
-            init: function () {
-                this.toggle = false;
-                this.vid = document.querySelector("#vid");
-                this.vid.pause();
-                this.playButton = document.querySelector("#playButton");
-                this.playButton.addEventListener('click', () => this.startVideo());
-            },
-            tick:function(){
-                if (this.el.object3D.visible == true) {
-                    if (!this.toggle) {
-                        this.toggle = true;
-                        this.showPlayButton();
-                    }
-                } else {
-                    this.toggle = false;
-                    this.vid.pause();
-                    this.hidePlayButton();
-                }
-            },
-            showPlayButton: function () {
-                this.playButton.style.display = 'block';
-            },
-            hidePlayButton: function () {
-                this.playButton.style.display = 'none';
-            },
-            startVideo: function () {
-                if (!this.vid.paused) {
-                    this.vid.pause();
-                } else {
-                    this.vid.play();
-                }
-            }
-        });
-    </script>
 </head>
 <body style="margin: 0; overflow: hidden;">
   <a-scene embedded arjs vr-mode-ui="enabled: false">
