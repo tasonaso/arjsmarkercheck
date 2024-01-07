@@ -1,4 +1,3 @@
-let key = 0;
 function loadImage(e) {
     // アップロードしたファイルのURLを取得
     if(e == null) return;
